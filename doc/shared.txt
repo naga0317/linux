@@ -1,0 +1,19 @@
+
+To compile shared library :-
+-------------------------
+
+gcc -c -Wall -Werror -fpic foo.c
+
+gcc -shared -o libfoo.so foo.o
+
+gcc -Wall -o test main.c -lfoo
+
+gcc -L/home/username/foo -Wall -o test main.c -lfoo
+
+./test
+
+LD_LIBRARY_PATH=/home/username/foo:$LD_LIBRARY_PATH
+
+export LD_LIBRARY_PATH=/home/username/foo:$LD_LIBRARY_PATH
+
+./test
