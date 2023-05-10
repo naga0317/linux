@@ -22,7 +22,6 @@ union semun
     #endif
 };
 
-
 #define SHM_KEY "/temp/shm"
 #define SEM_KEY "/tmp/sem"
 

@@ -24,7 +24,6 @@ union semun
     #endif
 };
 
-
 int main(int argc, char *argv[])
 {
     int semid, shmid;
