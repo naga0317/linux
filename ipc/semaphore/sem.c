@@ -8,42 +8,26 @@ int count=1;
 
 void* even(void* arg)
 {
-    //wait
-    sem_wait(&mutex);
-    //printf("\nEntered thread\n");
-
-    //critical section
-    //sleep(4);
-
-    //signal
-    while(count<=100)
+    while(count<100)
     {
+        sem_wait(&mutex);
         if(count%2==0)
          printf("%d ", count++);
 
         sem_post(&mutex);
     }
-    //sem_post(&mutex);
 }
 
 void* odd(void* arg)
 {
-    //wait
-    sem_wait(&mutex);
-    //printf("\nEntered thread\n");
-
-    //critical section
-    //sleep(4);
-
-    //signal
-    while(count<=100)
+    while(count<100)
     {
+        sem_wait(&mutex);
         if(count%2!=0)
          printf("%d ", count++);
 	
         sem_post(&mutex);
     }
-    //sem_post(&mutex);
 }
 
 int main()
