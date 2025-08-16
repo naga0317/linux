@@ -135,4 +135,13 @@ int main() {
 
 */
 
+/*
 
+🔹 Visualization
+Think of it like a pipeline:
+Producer --> [Buffer Queue] --> Consumer
+If producer is faster → buffer fills → producer blocks (not_full).
+If consumer is faster → buffer empties → consumer blocks (not_empty).
+⚡This is how synchronization prevents race conditions, overflow, and underflow.
+
+*/
