@@ -133,3 +133,13 @@ int main() {
     rwlock_destroy(&lock);
     return 0;
 }
+
+/*
+
+🔹 How It Works
+Readers can enter together as long as no writer is active/waiting.
+Writers wait until no readers/writers are active.
+When a writer releases, it prefers another waiting writer (to avoid starvation).
+If no writers are waiting → all readers are allowed in.
+
+*/
