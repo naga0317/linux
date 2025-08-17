@@ -161,4 +161,12 @@ Compile with: gcc rwlock.c -o rwlock -lpthread
 Run with writer preference : ./rwlock
 Run with reader preference: ./rwlock R
 
+🔹 Key Differences
+Reader Preference
+Readers can keep entering as long as no writer is active.
+Writers may starve if readers keep coming.
+Writer Preference
+Readers must wait if there are waiting writers.
+Prevents writer starvation.
+
 */
